@@ -1,10 +1,10 @@
 {
   "todos": [
     {
-      "id": 2,
-      "text": "Le mariage de ma copine dans pas longtemps",
-      "date": "Mer 12 juin a 14h00",
-      "reminder": true
+      "text": "ezrzerzer",
+      "date": "zerzerzer",
+      "reminder": false,
+      "id": 1
     }
   ]
 }

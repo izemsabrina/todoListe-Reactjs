@@ -6,8 +6,11 @@ function ListTodo(props) {
     <div className='list'>
            {
            props.listTodos.map(
-           todo => <Todo key={todo.id} 
-          todo={todo} onClick={props.handleClick} onDoubleClick= {props.doubleClick }/>
+           todo => 
+           <Todo key={todo.id}
+          todo={todo} 
+          onClick={props.handleClick}
+          onDoubleClick= {props.doubleClick }/>
           )
           }
   </div>
