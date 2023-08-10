@@ -17,7 +17,7 @@ function App() {
    const  fetchTodos= async()=>{
    const res = await fetch("http://localhost:8000/todos")
    const data = await res.json();
-   console.log(data)
+   setTodos(data)
 }
 fetchTodos()
 },[])
@@ -26,8 +26,9 @@ fetchTodos()
     const newTodo={...todo,id}
     setTodos([...todos,newTodo]) 
     }
-    function handleDelete(id){
-      console.log(id)
+   const handleDelete = async (id) => {
+    await fetch (`http://localhost:8000/todos/${id}`,
+    {method: "DELETE"});
       setTodos(
         todos.filter( 
         todo => todo.id !==id));
