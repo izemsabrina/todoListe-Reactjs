@@ -21,10 +21,19 @@ function App() {
 }
 fetchTodos()
 },[])
-  function handleAdd(todo){
-    const id =Math.floor(Math.random()* 100000)+1;
-    const newTodo={...todo,id}
-    setTodos([...todos,newTodo]) 
+const handleAdd =async (todo) => {
+  const res = await fetch ("http://localhost:8000/todos", 
+  {method:"POST",
+  headers:{
+    "content-type":"application/json"
+  },
+  body: JSON.stringify(todo)
+
+})
+const data = await res.json()
+     //const id =Math.floor(Math.random()* 100000)+1;
+    //const newTodo={...todo,id}
+    setTodos([...todos, data]) 
     }
    const handleDelete = async (id) => {
     await fetch (`http://localhost:8000/todos/${id}`,
