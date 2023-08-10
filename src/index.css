@@ -1,13 +1,122 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0; /* Réinitialise les marges par défaut du body */
+  display: flex; /* Affiche le body en tant que flexbox */
+  justify-content: center; /* Centre horizontalement le contenu du body */
+  align-items: center; /* Centre verticalement le contenu du body */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.container {
+  background-color:rgb(136, 136, 225);
+  
+ 
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+
+ 
+  padding: 100px; /* Ajouter un peu de marge interne pour l'espace entre le contenu et le bord du bloc */
+}
+.container label {
+  margin-bottom: 10px; /* Ajouter un espace entre les labels et les inputs */
+}
+
+/* Style pour les inputs */
+.container input {
+  width: 100%; /* Définir la largeur des inputs à 100% du conteneur (.container) */
+  padding: 10px; /* Ajouter un peu de remplissage pour un aspect visuel agréable */
+  margin-bottom: 20px; /* Ajouter un espace entre les inputs */
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.btn{
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn:focus{
+  outline: none;
+}
+.btn:active{
+  transform: scale(0.98);
+}
+.btn-block{
+  width: 100%;
+}
+.add-form{
+  margin-bottom: 10px;
+}
+.form-control{
+  margin:1rem 0;
+}
+.form-control input{
+  width: 100%;
+  height: 40px;
+  margin: 2px;
+  padding:  3px 7px;
+  font-size: 15px;
+}
+.form-control-check{
+  display: flex;
+  align-items:center;
+  justify-content: space-between ;
+  
+
+}
+/* .form-control-check label{
+  flex:1;
+  font-weight: bold;
+} */
+
+.todo{
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background: #ecf0f1;
+  border: 3px ;
+  padding: 1px ;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+}
+.list-todos{
+  max-height:  20px;
+  overflow: auto;
+}
+.todo h3{
+  display: flex;
+  justify-content: space-between;
+
+}
+.todo.reminder{
+  border-left: 10px solid #7827ae;
+}
+.category{
+  display: flex;
+}
+.counter{
+  text-align: right;
+
+}
+.counter span{
+  font-weight: bold;
+}
+footer{
+  margin-top: 30px;
+  text-align: center;
+}
+.list{
+  margin-bottom: 10px;
 }
